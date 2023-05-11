@@ -1,0 +1,20 @@
+@import "../../styles/vars.scss";
+
+.section {
+  @include section;
+}
+.wrapper {
+  padding-bottom: 3vw;
+}
+.header-table {
+  padding: 3vw 0 0.2vw;
+  color: $yellow-color;
+  @include table;
+}
+.elem {
+  @include table;
+  margin-bottom: 1vw;
+  height: 6vw;
+  background-color: #ffffff2d;
+  border-radius: 0.8vw;
+}

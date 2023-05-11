@@ -1,0 +1,15 @@
+@import "../../styles/vars.scss";
+
+.section {
+  @include section;
+  
+}
+.wrapper {
+    margin: 6vw auto 0;
+    width: 90%;
+    height: 15vw;
+    background-color: #ffffff2d;
+    border-radius: 0.8vw;}
+.converter{
+
+}

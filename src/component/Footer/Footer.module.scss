@@ -1,0 +1,28 @@
+@import "../../styles/vars.scss";
+
+.footer {
+  @include wrapper($background-footer, $shadow-footer);
+}
+
+.wrapper {
+  @include wrapper-content;
+  div {
+    width: 33%;
+    font-size: 1vw;
+    a {
+      text-decoration: none;
+      color: $yellow-color;
+      &:hover {
+        text-shadow: 0.1vw 0.1vw 0.1vw #000000, -0.1vw 0.1vw 0.1vw #000000,
+          0.1vw -0.1vw 0.1vw #000000, -0.1vw -0.1vw 0.1vw #000000;
+      }
+      &:active {
+        color: #a72d2a;
+      }
+    }
+  }
+}
+
+.logo {
+  @include logo;
+}

@@ -1,0 +1,55 @@
+@import "../../styles/vars.scss";
+
+.options {
+  margin: 2vw auto 0;
+  width: 80%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.baseCurrency {
+  width: 25vw;
+  font-size: 1.7vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+
+  select {
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    width: 25%;
+    height: 50%;
+    text-align: center;
+    color: $yellow-color;
+    border-radius: 0.6vw;
+    border: none;
+    background-color: #ffffff2d;
+    &:focus, &:hover{
+      border: 0.2vw solid black;
+      background-color: rgba(10, 10, 10, 0.393);
+    }
+  }
+}
+
+.searchCurrency {
+  display: flex;
+  align-items: center;
+
+  input {
+    outline: none;
+    padding: 1vw;
+    width: 25vw;
+    height: 50%;
+    font-size: 1.7vw;
+    color: #fff;
+    border-radius: 0.6vw;
+    border: none;
+    background-color: #ffffff2d;
+    &:focus, &:hover{
+      border: 0.2vw solid black;
+      background-color: rgba(10, 10, 10, 0.393);
+    }
+  }
+}
