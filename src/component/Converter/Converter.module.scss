@@ -2,14 +2,11 @@
 
 .section {
   @include section;
-  
 }
-.wrapper {
-    margin: 6vw auto 0;
-    width: 90%;
-    height: 15vw;
-    background-color: #ffffff2d;
-    border-radius: 0.8vw;}
-.converter{
-
+.converter {
+  margin: 6vw auto 0;
+  width: 90%;
+  height: 15vw;
+  background-color: #0a0909b1;
+  border-radius: 0.8vw;
 }

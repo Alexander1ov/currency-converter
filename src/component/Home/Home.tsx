@@ -11,7 +11,6 @@ const Home: FC = () => {
     (state) => state.currency
   );
   const data = Object.values(list);
-
   const sortedSearchCards = data.filter((cards) =>
     cards.CharCode.includes(searchValue.toUpperCase())
   );

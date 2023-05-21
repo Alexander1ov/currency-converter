@@ -6,6 +6,8 @@ import {
   toggleCurrency,
 } from "../../store/currency/CurrencySlice";
 import { Currency } from "../../store/currency/CurrencyTypes";
+import MyInput from "../UI/MyInput/MyInput";
+import MySelect from "../UI/MySelect/MySelect";
 
 import styles from "./Options.module.scss";
 
@@ -28,28 +30,22 @@ const Options: FC<BaseCurrency> = ({ data, searchValue }) => {
     <div className={styles.options}>
       <div className={styles.baseCurrency}>
         <p>Основная валюта</p>
-        <select name="BaseCurrency" onChange={handleBaseCurrency}>
-          <option value={[String(1), String(1)]}>RUB</option>
-          {data.map((elem, id) => {
-            return (
-              <option
-                key={id + 1}
-                value={[String(elem.Value), String(elem.Previous)]}
-              >
-                {elem.CharCode}
-              </option>
-            );
-          })}
-        </select>
-      </div>
-      <div className={styles.searchCurrency}>
-        <input
-          type="text"
-          placeholder="Поиск валюты по коду"
-          value={searchValue}
-          onChange={handleSearch}
+        <MySelect
+          data={data}
+          handleCurrency={(e) => {
+            handleBaseCurrency(e);
+          }}
         />
       </div>
+      <MyInput
+        className={styles.input}
+        type="text"
+        placeholder="Поиск валюты по коду"
+        value={searchValue}
+        onChange={(e) => {
+          handleSearch(e);
+        }}
+      />
     </div>
   );
 };

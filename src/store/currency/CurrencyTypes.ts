@@ -11,8 +11,8 @@ export interface Currency {
 export interface CurrencyState {
   list: Currency[];
   ratioBaseCurrency: number;
-  pastPrice:number;
-  searchValue:string;
+  pastPrice: number;
+  searchValue: string;
   loading: boolean;
   error: string | null;
 }

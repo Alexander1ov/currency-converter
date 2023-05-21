@@ -13,7 +13,6 @@ export const fetchCurrency = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >("currency/fetchCurrency", async function (_, { rejectWithValue }) {
-  //3 rejectValue параметр - AsyncThunkConfig
   try {
     const response = await axios.get(
       "https://www.cbr-xml-daily.ru/daily_json.js"

@@ -1,0 +1,18 @@
+.searchCurrency {
+  display: flex;
+  align-items: center;
+  input {
+    outline: none;
+    padding: 1vw;
+    font-size: 1.7vw;
+    color: #fff;
+    border-radius: 0.6vw;
+    border: none;
+    background-color: #ffffff2d;
+    &:focus,
+    &:hover {
+      border: 0.2vw solid black;
+      background-color: rgba(10, 10, 10, 0.393);
+    }
+  }
+}
