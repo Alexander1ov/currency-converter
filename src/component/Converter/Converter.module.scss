@@ -4,9 +4,20 @@
   @include section;
 }
 .converter {
-  margin: 6vw auto 0;
+  margin: 1vw auto 0;
+  padding: 2.9vw 0;
   width: 90%;
-  height: 15vw;
-  background-color: #0a0909b1;
+  height: 110%;
+  background-color: #ffffff0c;
   border-radius: 0.8vw;
+  &-header {
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 5vw;
+
+    h3 {
+      margin: 0;
+    }
+  }
 }

@@ -1,13 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 
 import ARROW from "../../../img/main/arrow.png";
 import styles from "./MyButton.module.scss";
 
-const MyButton = () => {
+const MyButton: FC = () => {
   return (
     <div className={styles.button}>
       <button>
-        <img src={ARROW} alt="" />
+        <img src={ARROW} alt="arrow" />
       </button>
     </div>
   );

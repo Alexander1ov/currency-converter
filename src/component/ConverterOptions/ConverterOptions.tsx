@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
 import {
@@ -11,7 +11,7 @@ import MySelect from "../UI/MySelect/MySelect";
 
 import styles from "./ConverterOptions.module.scss";
 
-const ConverterOptions = () => {
+const ConverterOptions: FC = () => {
   const { list } = useAppSelector((state) => state.currency);
   const { startingCurrency, endingCurrency } = useAppSelector(
     (state) => state.converter
@@ -34,35 +34,39 @@ const ConverterOptions = () => {
   };
   return (
     <div className={styles.options}>
-      <MyInput
-        className={styles.input}
-        type="number"
-        value={startingCurrency.quantity}
-        onChange={(e) => {
-          handleSearch(e, "0");
-        }}
-      />
-      <MySelect
-        data={data}
-        handleCurrency={(e) => {
-          handleBaseCurrency(e, "0");
-        }}
-      />
+      <div className={styles.baseCurrency}>
+        <MyInput
+          className={styles.input}
+          type="number"
+          value={startingCurrency.quantity}
+          onChange={(e) => {
+            handleSearch(e, "0");
+          }}
+        />
+        <MySelect
+          data={data}
+          handleCurrency={(e) => {
+            handleBaseCurrency(e, "0");
+          }}
+        />
+      </div>
       <MyButton />
-      <MyInput
-        className={styles.input}
-        type="number"
-        value={endingCurrency.quantity}
-        onChange={(e) => {
-          handleSearch(e, "1");
-        }}
-      />
-      <MySelect
-        data={data}
-        handleCurrency={(e) => {
-          handleBaseCurrency(e, "1");
-        }}
-      />
+      <div className={styles.minorCurrency}>
+        <MyInput
+          className={styles.input}
+          type="number"
+          value={endingCurrency.quantity}
+          onChange={(e) => {
+            handleSearch(e, "1");
+          }}
+        />
+        <MySelect
+          data={data}
+          handleCurrency={(e) => {
+            handleBaseCurrency(e, "1");
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -3,8 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ConverterState } from "./ConverterTypes";
 
 const initialState: ConverterState = {
-  startingCurrency: { name: "", quantity: "1", price: "0" },
-  endingCurrency: { name: "", quantity: "", price: "0" },
+  startingCurrency: { name: "RUB", quantity: "1", price: "1" },
+  endingCurrency: { name: "RUB", quantity: "1", price: "1" },
 };
 
 const converterSlice = createSlice({

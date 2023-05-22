@@ -19,12 +19,16 @@ const MySelect: FC<MySelectProps> = ({ data, handleCurrency }) => {
       name="BaseCurrency"
       onChange={handleCurrency}
     >
-      <option value={[String(1), String(1)]}>RUB</option>
+      <option value={[String(1), String(1), "RUB"]}>RUB</option>
       {data.map((elem, id) => {
         return (
           <option
             key={id + 1}
-            value={[String(elem.Value), String(elem.Previous), String(elem.CharCode)]}
+            value={[
+              String(elem.Value),
+              String(elem.Previous),
+              String(elem.CharCode),
+            ]}
           >
             {elem.CharCode}
           </option>
