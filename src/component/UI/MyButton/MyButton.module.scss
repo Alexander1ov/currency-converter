@@ -15,6 +15,7 @@
     transform: rotate(0) scale(1.5);
   }
 }
+
 .button {
   button {
     cursor: pointer;
@@ -28,17 +29,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
       background-color: rgba(10, 10, 10, 0.393);
       border-color: black;
+
       img {
         animation: 4s arrow infinite linear;
       }
     }
+
     &:active {
       transform: scale(0.8);
     }
   }
+
   img {
     width: 1.3vw;
   }

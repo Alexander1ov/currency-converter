@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useAppDispatch } from "./hooks/hooks";
-import { fetchCurrency } from "./store/currency/CurrencySlice";
+import { fetchCurrency } from "./store/currency/currencySlice";
 
-import Footer from "./component/Footer/Footer";
 import Header from "./component/Header/Header";
 import Main from "./component/Main/Main";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   const dispatch = useAppDispatch();

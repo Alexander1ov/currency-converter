@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { Currency } from "../../../store/currency/CurrencyTypes";
+import { Currency } from "../../../store/currency/currencyTypes";
 
 import styles from "./MySelect.module.scss";
 

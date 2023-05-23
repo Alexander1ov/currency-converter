@@ -1,12 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useAppDispatch } from "../../hooks/hooks";
 
+import { fetchCurrency } from "../../store/currency/currencySlice";
 import { ROUTES } from "../../constants/routes";
+import MyButton from "../UI/MyButton/MyButton";
 
 import LOGO from "../../img/header/logo.png";
+import ARROW from "../../img/header/arrowHeader.png";
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header: FC = () => {
+  const dispatch = useAppDispatch();
+  const updatePrice = () => {
+    dispatch(fetchCurrency());
+  };
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
@@ -38,6 +46,9 @@ const Header = () => {
             </NavLink>
           </div>
         </nav>
+        <div className={styles.button}>
+          <MyButton image={ARROW} swapValues={updatePrice} />
+        </div>
       </div>
     </header>
   );

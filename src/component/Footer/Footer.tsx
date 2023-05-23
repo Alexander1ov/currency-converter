@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { ROUTES } from "../../constants/routes";
@@ -6,7 +6,7 @@ import { ROUTES } from "../../constants/routes";
 import styles from "./Footer.module.scss";
 import LOGO from "../../img/footer/logo2.png";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>

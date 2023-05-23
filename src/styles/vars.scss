@@ -15,6 +15,7 @@ $shadow-footer: inset 0 0.3vw 0.4vw 0.1vw rgb(65, 65, 65),
   box-shadow: $m;
   display: flex;
 }
+
 @mixin wrapper-content {
   margin: auto;
   width: 70vw;
@@ -24,12 +25,15 @@ $shadow-footer: inset 0 0.3vw 0.4vw 0.1vw rgb(65, 65, 65),
   align-items: center;
   color: #fff;
 }
+
 @mixin logo {
   width: 33%;
+
   a {
     display: flex;
     justify-content: center;
   }
+
   img {
     width: 15%;
   }
@@ -46,7 +50,7 @@ $shadow-footer: inset 0 0.3vw 0.4vw 0.1vw rgb(65, 65, 65),
 
   h2 {
     margin: auto;
-    padding-top: 3vw;
+    padding-top: 1vw;
     width: fit-content;
     font-size: 3vw;
     position: relative;
@@ -64,10 +68,10 @@ $shadow-footer: inset 0 0.3vw 0.4vw 0.1vw rgb(65, 65, 65),
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr;
   align-content: center;
   overflow: hidden;
+
   span {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-

@@ -4,8 +4,8 @@ import { useAppDispatch } from "../../hooks/hooks";
 import {
   changeSearch,
   toggleCurrency,
-} from "../../store/currency/CurrencySlice";
-import { Currency } from "../../store/currency/CurrencyTypes";
+} from "../../store/currency/currencySlice";
+import { Currency } from "../../store/currency/currencyTypes";
 import MyInput from "../UI/MyInput/MyInput";
 import MySelect from "../UI/MySelect/MySelect";
 

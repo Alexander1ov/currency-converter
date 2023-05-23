@@ -1,13 +1,17 @@
 import React, { FC } from "react";
 
-import ARROW from "../../../img/main/arrow.png";
 import styles from "./MyButton.module.scss";
 
-const MyButton: FC = () => {
+interface MyButtonProps {
+  image:string;
+  swapValues: () => void;
+}
+
+const MyButton: FC<MyButtonProps> = ({image, swapValues }) => {
   return (
     <div className={styles.button}>
-      <button>
-        <img src={ARROW} alt="arrow" />
+      <button onClick={swapValues}>
+        <img src={image} alt="arrow" />
       </button>
     </div>
   );

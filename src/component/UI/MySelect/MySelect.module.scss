@@ -1,20 +1,21 @@
 @import "../../../styles/vars.scss";
 
 .select {
-    outline: none;
-    appearance: none;
-    cursor: pointer;
-    width: 6vw;
-    height: 3.5vw;
-    font-size: 1.7vw;
-    text-align: center;
-    color: $yellow-color;
-    border-radius: 0.6vw;
-    border: none;
-    background-color: #ffffff2d;
-    &:focus,
-    &:hover {
-      border: 0.2vw solid black;
-      background-color: rgba(10, 10, 10, 0.393);
-    }
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  width: 6vw;
+  height: 3.5vw;
+  font-size: 1.7vw;
+  text-align: center;
+  color: $yellow-color;
+  border-radius: 0.6vw;
+  border: none;
+  background-color: #ffffff2d;
+
+  &:focus,
+  &:hover {
+    border: 0.2vw solid black;
+    background-color: rgba(10, 10, 10, 0.393);
   }
+}

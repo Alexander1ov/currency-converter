@@ -4,11 +4,13 @@ import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import {
   changeParameters,
   changeQuantity,
-} from "../../store/converter/ConverterSlice";
+  toggleValues,
+} from "../../store/converter/converterSlice";
 import MyButton from "../UI/MyButton/MyButton";
 import MyInput from "../UI/MyInput/MyInput";
 import MySelect from "../UI/MySelect/MySelect";
 
+import ARROW from "../../img/main/arrow.png";
 import styles from "./ConverterOptions.module.scss";
 
 const ConverterOptions: FC = () => {
@@ -16,8 +18,8 @@ const ConverterOptions: FC = () => {
   const { startingCurrency, endingCurrency } = useAppSelector(
     (state) => state.converter
   );
-  const dispatch = useAppDispatch();
   const data = Object.values(list);
+  const dispatch = useAppDispatch();
 
   const handleSearch = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -32,6 +34,11 @@ const ConverterOptions: FC = () => {
   ) => {
     dispatch(changeParameters(e.target.value.split(",").concat(start)));
   };
+
+  const swapValues = () => {
+    dispatch(toggleValues());
+  };
+
   return (
     <div className={styles.options}>
       <div className={styles.baseCurrency}>
@@ -50,7 +57,7 @@ const ConverterOptions: FC = () => {
           }}
         />
       </div>
-      <MyButton />
+      <MyButton swapValues={swapValues} image={ARROW} />
       <div className={styles.minorCurrency}>
         <MyInput
           className={styles.input}

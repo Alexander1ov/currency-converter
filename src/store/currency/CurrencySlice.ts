@@ -1,12 +1,7 @@
-import {
-  createSlice,
-  PayloadAction,
-  createAsyncThunk,
-  AnyAction,
-} from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import { Currency, CurrencyState } from "./CurrencyTypes";
+import { Currency, CurrencyState } from "./currencyTypes";
 
 export const fetchCurrency = createAsyncThunk<
   Currency[],
@@ -55,9 +50,10 @@ const currencySlice = createSlice({
         state.list = action.payload;
         state.loading = false;
       })
-
-      .addMatcher(isError, (state, action: PayloadAction<string>) => {
-        state.error = action.payload;
+      .addCase(fetchCurrency.rejected, (state, action) => {
+        if (action.payload) {
+          state.error = action.payload;
+        }
         state.loading = false;
       });
   },
@@ -65,7 +61,3 @@ const currencySlice = createSlice({
 
 export const { toggleCurrency, changeSearch } = currencySlice.actions;
 export default currencySlice.reducer;
-
-function isError(action: AnyAction) {
-  return action.type.endsWith("rejected");
-}

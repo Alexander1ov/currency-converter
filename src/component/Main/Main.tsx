@@ -1,13 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { ROUTES } from "../../constants/routes";
 
+import { ROUTES } from "../../constants/routes";
 import Home from "../Home/Home";
 import Converter from "../Converter/Converter";
 
 import styles from "./Main.module.scss";
 
-const Main = () => {
+const Main: FC = () => {
   return (
     <main className={styles.main}>
       <Routes>

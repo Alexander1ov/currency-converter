@@ -3,13 +3,15 @@
 .section {
   @include section;
 }
+
 .converter {
-  margin: 1vw auto 0;
+  margin: 3vw auto 0;
   padding: 2.9vw 0;
   width: 90%;
   height: 110%;
   background-color: #ffffff0c;
   border-radius: 0.8vw;
+
   &-header {
     font-size: 1.5vw;
     display: flex;
