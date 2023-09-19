@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { useAppDispatch } from "./hooks/hooks";
 import { fetchCurrency } from "./store/currency/currencySlice";
 
