@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { useAppSelector } from "../../hooks/hooks";
 
-import ListCurrencies from "../ListCurrencies/ListCurrencies";
-import Options from "../Options/Options";
+import ListCurrencies from "../../component/ListCurrencies/ListCurrencies";
+import Options from "../../component/Options/Options";
 
 import styles from "./Home.module.scss";
 

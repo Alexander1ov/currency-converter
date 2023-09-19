@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
-import ConverterOptions from "../ConverterOptions/ConverterOptions";
-import ConverterResult from "../ConverterResult/ConverterResult";
+import ConverterOptions from "../../component/ConverterOptions/ConverterOptions";
+import ConverterResult from "../../component/ConverterResult/ConverterResult";
 
 import styles from "./Converter.module.scss";
 

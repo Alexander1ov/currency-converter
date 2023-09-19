@@ -1,23 +1,26 @@
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import { ROUTES } from "./constants/routes";
 import { useAppDispatch } from "./hooks/hooks";
 import { fetchCurrency } from "./store/currency/currencySlice";
+import Layout from "./layout/Layout";
+import Converter from "./pages/Converter/Converter";
+import Home from "./pages/Home/Home";
 
-import Header from "./component/Header/Header";
-import Main from "./component/Main/Main";
-import Footer from "./component/Footer/Footer";
-
-function App() {
+const App: FC = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchCurrency());
   }, [dispatch]);
   return (
-    <div className="app">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path={ROUTES.HOME} element={<Layout />}>
+        <Route index element={<Home />}></Route>
+        <Route path={ROUTES.CONVERTER} element={<Converter />}></Route>
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
